@@ -1,0 +1,149 @@
+@charset "UTF-8";
+/* Base Styles for M.I.A.U Project */
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=JetBrains+Mono&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --cor-de-fundo: #0D0D0D;
+    --cor-de-fundo-main: #2D1B4E;
+    --cor-de-texto: #E8E4DC;
+    --cor-destaque: #D4A017;
+    --cor-perigo: #C41E3A;
+    --cor-nota-fundo: #3E2b56;
+    --cor-nota-texto: #E3D1F3;
+    --cor-nivel-baixo: #178fd4;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-de-texto);
+    font-family: 'Courier Prime', monospace;
+    margin: 0px;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Special Elite', monospace;
+    font-size: 2em;
+    color: var(--cor-destaque);
+}
+
+header {
+    background-color: var(--cor-de-fundo-main);
+}
+
+header > h1 {
+    text-align: center;
+    color: var(--cor-destaque);
+    font-weight: normal;
+    font-family: 'Special Elite', monospace;
+    font-size: 4em;
+    padding: 15px 0px;
+    margin: 0px;
+}
+
+nav {
+    text-align: center;
+}
+
+nav > a {
+    display: inline-block;
+    margin: 0px 20px;
+    text-decoration: none;
+    color: var(--cor-de-texto);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+section {
+    background-color: var(--cor-de-fundo-main);
+    text-align: justify;
+    margin: 10px 20px 0px 20px;
+    padding: 10px;
+}
+
+section.status {
+    background-color: var(--cor-de-fundo);
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+    padding: 5px;
+    font-weight: normal;
+    color: var(--cor-perigo);
+    font-family: 'Special Elite', monospace;
+    border-top: 1px solid #C41E3A;
+    border-bottom: 1px solid #C41E3A;
+}
+
+.status > p {
+    display: inline-block;
+    margin: 0px 30px;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+section > p {
+    text-align: justify;
+    margin: 0px 20px 0px 20px;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+    font-size: 0.8em;
+    margin-top: 50px;
+    border-top: 1px solid #333;
+}
+
+
+footer > p > a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.titulo {
+    text-align: center;
+    font-family: 'Special Elite', monospace;
+    font-size: 2em;
+}
+
+.voltar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.voltar > a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.censurado {
+    color: black;
+    background-color: black;
+    text-decoration: none;
+}
+
+.censurado:hover {
+    color: var(--cor-de-texto);
+    background-color: black;
+}
+
+.censurado > a {
+    color: black;
+    background-color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.censurado > a:hover {
+    color: var(--cor-de-texto);
+    background-color: black;
+}

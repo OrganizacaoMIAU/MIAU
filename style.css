@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+section.topo {
+    text-align: justify;
+    margin: 0px 20px 0px 20px;
+    padding: 10px;
+}
+
+section.listamain {
+    text-align: justify;
+    margin: 10px 20px 0px 20px;
+    padding: 10px;
+}
+
+section.listamain > dl > dt {
+    text-align: left;
+    color: var(--cor-destaque);
+    font-weight: normal;
+    font-family: 'Special Elite', monospace;
+    font-size: 2em;
+    padding-left: 30px;
+    margin: 0px;
+}
+
+section.listamain > dl > dt > h2 > a {
+    text-decoration: none;
+    color: var(--cor-destaque);
+}
+
+section.listamain > dl > dt > h2 > a:visited {
+    color: var(--cor-destaque);
+}
+
+section.listamain > dl > dd {
+    color: var(--cor-de-texto);
+    font-weight: normal;
+    font-family: 'Courier Prime', monospace;
+    font-size: 1em;
+    padding-left: 60px;
+    margin: 0px;
+}

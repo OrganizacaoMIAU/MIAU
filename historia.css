@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+.titulo > h1 {
+    text-align: center;
+    color: var(--cor-destaque);
+    font-weight: normal;
+    font-family: 'Special Elite', monospace;
+    font-size: 3em;
+    margin: 0px;
+}
+
+section > article > h2 {
+    text-align: center;
+    font-family: 'Special Elite', monospace;
+    font-size: 2em;
+    color: var(--cor-destaque);
+    margin: 0px;
+    padding: 10px;
+}
+
+section > article > p {
+    margin: 0px 20px;
+    padding: 10px;
+}
+
+section > article > p > strong {
+    color: var(--cor-destaque);
+}
+
+.voltar > a {
+    display: block;
+    text-align: left;
+    color: var(--cor-destaque);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}

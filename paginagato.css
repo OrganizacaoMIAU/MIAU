@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+.perfil>h1 {
+    text-align: center;
+    color: var(--cor-destaque);
+    font-weight: normal;
+    font-family: 'Special Elite', monospace;
+    font-size: 3em;
+    padding-left: 30px;
+    margin: 0px;
+}
+
+.perfil>img {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: 10px;
+}
+
+.apresentacao>h2 {
+    text-align: center;
+    color: var(--cor-destaque);
+    font-weight: normal;
+    font-family: 'Special Elite', monospace;
+    font-size: 2em;
+    margin: 0px;
+}
+
+.apresentacao>p>strong {
+    color: var(--cor-destaque);
+}
+
+.nota {
+    color: var(--cor-perigo);
+}
+
+.nota.baixo {
+    color: var(--cor-nivel-baixo);
+}
+
+.nota.medio {
+    color: var(--cor-destaque);
+}
+
+.nota.alto {
+    color: var(--cor-perigo);
+}
+
+.apresentacao>ul {
+    margin: 0px 20px 0px 20px;
+    padding: 10px;
+}
+
+.apresentacao>ul>li {
+    margin: 10px 0px;
+}
+
+.apresentacao>p>a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contencao>h2 {
+    text-align: center;
+    color: var(--cor-destaque);
+    font-weight: normal;
+    font-family: 'Special Elite', monospace;
+    font-size: 2em;
+    margin: 0px;
+}
+
+.contencao>p {
+    margin: 0px 20px 0px 20px;
+    padding: 10px;
+}
+
+.relato>h2 {
+    text-align: center;
+    color: var(--cor-destaque);
+    font-weight: normal;
+    font-family: 'Special Elite', monospace;
+    font-size: 2em;
+    margin: 0px;
+}
+
+.relato>p {
+    margin: 0px 20px 0px 20px;
+    padding: 10px;
+}
+
+.relato>blockquote {
+    margin: 0px 60px;
+    padding: 10px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.historia>h2 {
+    text-align: center;
+    color: var(--cor-destaque);
+    font-weight: normal;
+    font-family: 'Special Elite', monospace;
+    font-size: 2em;
+    margin: 0px;
+}
+
+.historia>p {
+    margin: 0px 20px;
+}
+
+.historia>p>a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.voltar>a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}

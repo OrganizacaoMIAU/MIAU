@@ -1,0 +1,7 @@
+.titulo {
+    text-align: left;
+    font-family: 'Special Elite', monospace;
+    font-size: 2em;
+    color: var(--cor-destaque);
+    margin-left: 20px;
+}

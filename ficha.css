@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+section.ListaGatos {
+    text-align: justify;
+    margin: 10px 20px 0px 20px;
+    padding: 10px;
+    box-shadow: rgba(51, 48, 56, 0.61) 9px 9px 5px 0px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+section.ListaGatos > dl > dt {
+    text-align: left;
+    color: var(--cor-destaque);
+    font-weight: normal;
+    font-family: 'Special Elite', monospace;
+    font-size: 2em;
+    padding-left: 30px;
+    margin: 0px;
+}
+
+section.ListaGatos > dl > dt > a {
+    text-decoration: none;
+    color: var(--cor-destaque);
+}
+
+section.ListaGatos > dl > dt > a:visited {
+    color: var(--cor-destaque);
+}
+
+section.ListaGatos > dl > dd {
+    color: var(--cor-de-texto);
+    font-weight: normal;
+    font-family: 'Courier Prime', monospace;
+    font-size: 1em;
+    padding-left: 60px;
+}
+
+.titulo {
+    text-align: center;
+    font-family: 'Special Elite', monospace;
+    font-size: 2em;
+}
