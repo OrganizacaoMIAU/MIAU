@@ -48,16 +48,16 @@
     color: var(--cor-perigo);
 }
 
-.apresentacao>ul {
+.apresentacao ul {
     margin: 0px 20px 0px 20px;
     padding: 10px;
 }
 
-.apresentacao>ul>li {
-    margin: 10px 0px;
+.apresentacao ul li {
+    line-height: 1.5em;
 }
 
-.apresentacao>p>a {
+.apresentacao>p:not(.censurado)>a {
     color: var(--cor-destaque);
     text-decoration: none;
     font-weight: bold;

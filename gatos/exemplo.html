@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../imagens/favicon.ico">
+    <!-- Fontes do Google (você já usa essas!) -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:wght@400;700&family=JetBrains+Mono&display=swap">
+    <title>M.I.A.U — Dossiê: Gato Diabo</title>
+    <style>
+        /* ==============================================
+           EXEMPLO: PÁGINA DE DOSSIÊ - ESTILO "ORGANIZAÇÃO SECRETA"
+           
+           Esse arquivo é um exemplo de como deixar a página 
+           do Gato Diabo com cara profissional e misteriosa.
+           
+           Tudo que for NOVO pra você vai ter um comentário 
+           explicando o que faz. Pode copiar o que quiser!
+           ============================================== */
+
+        /* --- VARIÁVEIS (você já conhece isso!) --- */
+        :root {
+            --cor-de-fundo: #0a0a0f;
+            --cor-de-fundo-main: #12121f;
+            --cor-de-texto: #c8c2b4;
+            --cor-destaque: #D4A017;
+            --cor-perigo: #C41E3A;
+            --cor-borda: #2a2a3a;
+        }
+
+        /* --- RESET BÁSICO --- */
+        /* O "*" seleciona TODOS os elementos da página de uma vez.
+           box-sizing: border-box faz o padding não aumentar o tamanho dos elementos.
+           Isso evita aqueles bugs chatos de coisas ficando maiores do que deviam. */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--cor-de-fundo);
+            color: var(--cor-de-texto);
+            font-family: 'Courier Prime', monospace;
+            /* min-height: 100vh faz o body ter no mínimo a altura da tela inteira.
+               "vh" = viewport height (altura da janela). 100vh = 100% da janela. */
+            min-height: 100vh;
+        }
+
+        /* --- BARRA VERMELHA DE ALERTA --- */
+        .alerta-topo {
+            background-color: var(--cor-perigo);
+            color: white;
+            text-align: center;
+            padding: 6px 10px;
+            font-size: 0.75em;
+            font-weight: bold;
+            /* letter-spacing aumenta o espaço entre as letras.
+               Dá um ar mais "oficial" e "militar" pro texto. */
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* --- HEADER --- */
+        header {
+            background-color: var(--cor-de-fundo-main);
+            padding: 30px 20px 15px 20px;
+            text-align: center;
+            /* border-bottom cria aquela linha embaixo do header */
+            border-bottom: 3px solid var(--cor-destaque);
+        }
+
+        header>h1 {
+            font-family: 'Special Elite', monospace;
+            color: var(--cor-destaque);
+            font-size: 3em;
+            font-weight: normal;
+            /* letter-spacing de novo, pra dar aquele espaçamento legal no logo */
+            letter-spacing: 8px;
+            margin-bottom: 5px;
+        }
+
+        /* Esse é o subtítulo debaixo do M.I.A.U */
+        .subtitulo-header {
+            color: #555;
+            font-size: 0.7em;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        /* --- NAVEGAÇÃO --- */
+        nav {
+            text-align: center;
+            padding: 12px 0;
+            background-color: #0d0d18;
+            border-bottom: 1px solid var(--cor-borda);
+        }
+
+        nav>a {
+            display: inline-block;
+            color: var(--cor-de-texto);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin: 0 20px;
+            padding: 5px 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            /* border-bottom transparente cria um "espaço reservado" pra linha.
+               Quando o hover ativar, a linha aparece sem empurrar o texto. */
+            border-bottom: 2px solid transparent;
+        }
+
+        nav>a:hover {
+            color: var(--cor-destaque);
+            border-bottom: 2px solid var(--cor-destaque);
+        }
+
+        /* --- ÁREA DO CONTEÚDO --- 
+           max-width limita a largura máxima do conteúdo.
+           margin: 0 auto centraliza o bloco na tela.
+           Isso faz o site não ficar "esticado" em telas grandes. */
+        main {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        /* --- CABEÇALHO DO DOSSIÊ --- */
+        .dossie-header {
+            border: 1px solid var(--cor-borda);
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            /* background com um tom levemente diferente pra destacar */
+            background-color: var(--cor-de-fundo-main);
+        }
+
+        .dossie-codigo {
+            color: var(--cor-perigo);
+            font-size: 0.8em;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .dossie-header>h2 {
+            font-family: 'Special Elite', monospace;
+            color: var(--cor-destaque);
+            font-size: 2.5em;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .dossie-header>p {
+            color: #777;
+            font-style: italic;
+            font-size: 0.95em;
+        }
+
+        /* --- NÍVEL DE AMEAÇA (aquela barra dramática) --- */
+        .nivel-ameaca {
+            border: 1px solid var(--cor-perigo);
+            background-color: rgba(196, 30, 58, 0.1);
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .nivel-ameaca>p {
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--cor-perigo);
+            font-size: 1.1em;
+        }
+
+        /* --- IMAGEM DO GATO --- */
+        .registro-visual {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .registro-visual>img {
+            display: block;
+            margin: 0 auto;
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+            border: 1px solid var(--cor-borda);
+            padding: 5px;
+            background-color: var(--cor-de-fundo-main);
+        }
+
+        .registro-visual>p {
+            font-size: 0.75em;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* --- SEÇÕES DO DOSSIÊ --- */
+        .secao {
+            border: 1px solid var(--cor-borda);
+            margin-bottom: 20px;
+            background-color: var(--cor-de-fundo-main);
+        }
+
+        /* Título da seção com fundo colorido */
+        .secao-titulo {
+            background-color: #1a1a2e;
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--cor-borda);
+            font-family: 'Special Elite', monospace;
+            color: var(--cor-destaque);
+            font-size: 1.3em;
+            /* display: flex alinha items na mesma linha.
+               Aqui ele coloca o "►" e o texto lado a lado. */
+            display: flex;
+            align-items: center;
+        }
+
+        /* O marcador (►) antes do título */
+        .secao-titulo::before {
+            /* content adiciona um texto/símbolo antes do elemento.
+               É puramente visual, não aparece no HTML. */
+            content: "► ";
+            color: var(--cor-perigo);
+            margin-right: 10px;
+            font-size: 0.8em;
+        }
+
+        .secao-corpo {
+            padding: 20px;
+        }
+
+        .secao-corpo>p {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .secao-corpo>ul {
+            margin: 0 0 0 20px;
+            padding: 0;
+        }
+
+        .secao-corpo>ul>li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* --- FICHA TÉCNICA (aquele quadro com os dados) --- */
+        .ficha {
+            border: 1px solid var(--cor-borda);
+            margin-bottom: 20px;
+            background-color: var(--cor-de-fundo-main);
+        }
+
+        .ficha-titulo {
+            background-color: #1a1a2e;
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--cor-borda);
+            font-family: 'Special Elite', monospace;
+            color: var(--cor-destaque);
+            font-size: 1.3em;
+        }
+
+        /* Cada linha da ficha */
+        .ficha-linha {
+            padding: 10px 20px;
+            border-bottom: 1px solid #1a1a2a;
+            font-size: 0.95em;
+        }
+
+        /* Remove a borda da última linha */
+        .ficha-linha:last-child {
+            border-bottom: none;
+        }
+
+        .ficha-linha>strong {
+            color: var(--cor-destaque);
+        }
+
+        .ameaca-alta {
+            color: var(--cor-perigo);
+            font-weight: bold;
+        }
+
+        /* --- SEÇÃO DE RELATO (blockquote estilizado) --- */
+        .relato-bloco {
+            border-left: 3px solid var(--cor-perigo);
+            background-color: rgba(196, 30, 58, 0.05);
+            margin: 15px 0;
+            padding: 20px;
+            font-style: italic;
+            line-height: 1.8;
+            font-size: 1.05em;
+        }
+
+        /* Quem disse a frase */
+        .relato-autor {
+            text-align: right;
+            color: #666;
+            font-size: 0.85em;
+            margin-top: 10px;
+            font-style: normal;
+        }
+
+        /* --- AVISO DE PERIGO --- */
+        .aviso-perigo {
+            border: 2px solid var(--cor-perigo);
+            background-color: rgba(196, 30, 58, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .aviso-perigo>p {
+            color: var(--cor-perigo);
+            font-weight: bold;
+            line-height: 1.7;
+        }
+
+        /* --- SEÇÃO "VEJA TAMBÉM" --- */
+        .veja-tambem {
+            border: 1px solid var(--cor-borda);
+            margin-bottom: 20px;
+            background-color: var(--cor-de-fundo-main);
+        }
+
+        .veja-tambem-titulo {
+            background-color: #1a1a2e;
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--cor-borda);
+            font-family: 'Special Elite', monospace;
+            color: var(--cor-perigo);
+            font-size: 1.1em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .veja-tambem-item {
+            display: block;
+            padding: 12px 20px;
+            border-bottom: 1px solid #1a1a2a;
+            text-decoration: none;
+            color: var(--cor-de-texto);
+        }
+
+        .veja-tambem-item:hover {
+            background-color: #1a1a2e;
+            color: var(--cor-destaque);
+        }
+
+        .veja-tambem-item>strong {
+            color: var(--cor-destaque);
+        }
+
+        .veja-tambem-item>span {
+            display: block;
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 3px;
+        }
+
+        /* --- BOTÕES DE NAVEGAÇÃO --- */
+        .navegacao {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--cor-borda);
+        }
+
+        .navegacao>a {
+            color: var(--cor-destaque);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95em;
+            letter-spacing: 1px;
+        }
+
+        .navegacao>a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #444;
+            font-size: 0.75em;
+            border-top: 1px solid var(--cor-borda);
+            margin-top: 40px;
+            letter-spacing: 1px;
+        }
+
+        footer>p {
+            margin-bottom: 5px;
+        }
+
+        footer a {
+            color: var(--cor-destaque);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Barra de alerta no topo -->
+    <div class="alerta-topo">
+        ⚠ Documento Classificado — Acesso Restrito — Protocolo Vermelho Ativo ⚠
+    </div>
+
+    <!-- Header com o nome da organização -->
+    <header>
+        <h1>M.I.A.U</h1>
+        <p class="subtitulo-header">Monitoramento de Incidentes com Animais Ultraperigosos</p>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="../Gatos.html">Catálogo</a>
+        <a href="../sobrenos.html">Sobre Nós</a>
+    </nav>
+
+    <main>
+
+        <!-- Cabeçalho do Dossiê -->
+        <div class="dossie-header">
+            <p class="dossie-codigo">DOSSIÊ M.I.A.U — REGISTRO #0042</p>
+            <h2>Gato Diabo</h2>
+            <p>Também conhecido como: Gato Infernal, Gato do Submundo, Gato de Lúcifer, Felino das Chamas, O Mensageiro
+            </p>
+        </div>
+
+        <!-- Barra de Nível de Ameaça -->
+        <div class="nivel-ameaca">
+            <p>⛔ Nível de Ameaça: Imensurável ⛔</p>
+        </div>
+
+        <!-- Registro Visual -->
+        <div class="registro-visual">
+            <img src="imagens/gatodiabo.png" alt="Gato Diabo após massacrar a equipe Delta">
+            <p>Registro visual capturado por drone da Equipe Delta — Arquivo M.I.A.U — Uso Interno</p>
+        </div>
+
+        <!-- Ficha Técnica -->
+        <div class="ficha">
+            <div class="ficha-titulo">Ficha Técnica</div>
+            <div class="ficha-linha"><strong>Designação:</strong> Gato Diabo</div>
+            <div class="ficha-linha"><strong>Raça:</strong> Gato</div>
+            <div class="ficha-linha"><strong>Classificação:</strong> Infernal</div>
+            <div class="ficha-linha"><strong>Ameaça:</strong> <span class="ameaca-alta">IMENSURÁVEL</span></div>
+            <div class="ficha-linha"><strong>Status de Contenção:</strong> <span class="ameaca-alta">IMPOSSÍVEL</span>
+            </div>
+        </div>
+
+        <!-- Características Físicas -->
+        <div class="secao">
+            <div class="secao-titulo">Características Físicas</div>
+            <div class="secao-corpo">
+                <ul>
+                    <li>Olhos que emitem um brilho vermelho constante, visível mesmo em plena luz do dia</li>
+                    <li>Pelagem negra com marcas que parecem brasas vivas sob a pele</li>
+                    <li>Temperatura corporal extremamente elevada, capaz de derreter objetos ao toque</li>
+                    <li>Chifres pequenos e curvados próximos às orelhas</li>
+                    <li>Cauda bifurcada na ponta</li>
+                    <li>Pressão enorme ao seu redor</li>
+                    <li>Possui uma capa vermelha que o cobre quase inteiramente</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Capacidades -->
+        <div class="secao">
+            <div class="secao-titulo">Capacidades Documentadas</div>
+            <div class="secao-corpo">
+                <ul>
+                    <li>Controle total sobre o fogo e altas temperaturas</li>
+                    <li>Capacidade de criar portais para onde quiser</li>
+                    <li>Aparente imunidade completa a danos físicos convencionais</li>
+                    <li>Possessão temporária de outros seres vivos</li>
+                    <li>Pseudomanipulação mental</li>
+                    <li>Capacidade de modificar a própria aparência</li>
+                    <li>Invocação de gatos do submundo</li>
+                    <li>Capacidade de falar todas as línguas humanas e felinas</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Fraquezas -->
+        <div class="secao">
+            <div class="secao-titulo">Vulnerabilidades Conhecidas</div>
+            <div class="secao-corpo">
+                <ul>
+                    <li>Água benta causa desconforto</li>
+                    <li>Símbolos sagrados o repelem por um curto período de tempo</li>
+                    <li>Rituais de exorcismo avançado funcionam</li>
+                    <li>Prata consagrada causa dano a ele</li>
+                    <li>Rituais sagrados de elite são eficazes para o parar</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Protocolo de Contenção -->
+        <div class="aviso-perigo">
+            <p>⚠ ALERTA DE CONTENÇÃO ⚠</p>
+            <p>Sob nenhuma circunstância tente contê-lo sozinho. Equipes inteiras foram dizimadas em tentativas
+                anteriores. Se você o encontrar, apenas reze. Sua única esperança é que ele perca o interesse antes de
+                decidir acabar com você.</p>
+        </div>
+
+        <!-- Relato -->
+        <div class="secao">
+            <div class="secao-titulo">Relato — Agente Mirella</div>
+            <div class="secao-corpo">
+                <p>Agente Mirella é uma das poucas sobreviventes de um encontro direto com o Gato Diabo. Ela ficou
+                    afastada por 8 meses após o incidente e ainda sofre com as sequelas.</p>
+
+                <div class="relato-bloco">
+                    "Nós não sabíamos o que estávamos enfrentando. Os relatórios diziam que era apenas mais um gato
+                    amaldiçoado, talvez um pouco mais perigoso. Quando chegamos na localização, o ar já estava quente
+                    demais. Era janeiro e tínhamos sensação térmica de 50 graus. Quando finalmente o vimos, ele estava
+                    sentado, nos observando. Aqueles olhos... eu ainda os vejo quando fecho os meus. Ele não atacou
+                    imediatamente. Ele riu. Um gato riu para nós. Depois disso, tudo pegou fogo. Literalmente. Meus
+                    companheiros, nossos equipamentos, as árvores ao redor. Eu só sobrevivi porque caí em um rio
+                    próximo. Quando saí da água, ele tinha ido embora, deixando apenas cinzas onde minha equipe estava.
+                    Até hoje não sei por que ele me poupou. Talvez como testemunha. Talvez como aviso."
+                    <p class="relato-autor">— Agente Mirella, Depoimento #0042-A</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Variações -->
+        <div class="secao">
+            <div class="secao-titulo">Variações</div>
+            <div class="secao-corpo">
+                <p>O Gato Diabo parece ser único, mas há rumores de que ele pode criar crias demoníacas menores.
+                    Investigações ainda estão em andamento sobre possíveis variantes.</p>
+            </div>
+        </div>
+
+        <!-- História -->
+        <div class="secao">
+            <div class="secao-titulo">Histórico</div>
+            <div class="secao-corpo">
+                <p>A história do Gato Diabo ainda está sendo documentada.</p>
+            </div>
+        </div>
+
+        <!-- Veja Também -->
+        <div class="veja-tambem">
+            <div class="veja-tambem-titulo">Dossiês Relacionados</div>
+            <a href="GatoPreto.html" class="veja-tambem-item">
+                <strong>Gato Preto Amaldiçoado</strong>
+                <span>Guardião noturno com poderes ligados à lua e à escuridão</span>
+            </a>
+            <a href="GatoPeixe.html" class="veja-tambem-item">
+                <strong>Gato Peixe</strong>
+                <span>Entidade aquática com capacidade de sobreviver indefinidamente debaixo d'água</span>
+            </a>
+            <a href="GatoBanana.html" class="veja-tambem-item">
+                <strong>Gato Banana</strong>
+                <span>Anomalia alimentar com casca regenerativa infinita</span>
+            </a>
+        </div>
+
+        <!-- Navegação -->
+        <div class="navegacao">
+            <a href="../Gatos.html">← Voltar ao Catálogo</a>
+            <a href="GatoPeixe.html">Próximo Dossiê →</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>M.I.A.U — Monitoramento de Incidentes com Animais Ultraperigosos</p>
+        <p>Documento gerado automaticamente — Distribuição não autorizada é crime federal</p>
+        <p>Desenvolvido por: <a href="https://x.com/AssaOSino1" target="_blank">@AssaOSino1</a></p>
+    </footer>
+
+</body>
+
+</html>
